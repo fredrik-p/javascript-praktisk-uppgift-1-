@@ -1,0 +1,22 @@
+body {
+	background-color: #eeeeee;
+	color: #333;
+	line-height: 1.5;
+	letter-spacing: 0.1em;
+	height: 100vh;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+	padding: 1em;
+	height: auto;
+	width: 90%;
+	border-radius: .5em;
+	box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 1),
+	12px 12px 12px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  h1 {
+	font-size: 1.5em;
+	font-weight: 700;
+}
