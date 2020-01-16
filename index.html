@@ -14,12 +14,13 @@
 <body>
     <div class="container my-5 mx-auto">
         <h1 class="text-muted text-center my-4">Who's nameday is it?</h1>
+
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <label class="input-group-text" for="inputGroupSelect01">Country</label>
+                <label class="input-group-text" for="inputGroupSelect01">Today in:</label>
             </div>
             <select class="custom-select" id="inputGroupSelect01">
-                <option selected>Choose a country..</option>
+                <option selected>--</option>
                 <option value="cz">CZ</option>
                 <option value="sk">SK</option>
                 <option value="pl">PL</option>
@@ -36,87 +37,182 @@
                 <option value="fi">FI</option>
             </select>
         </div>
-        <div class="byDate">
-            <h2>Search by name:</h2>
+
+
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect04">Timezone:</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect04">
+                <option selected>--</option>
+                <option value="America%2FDenver">America/Denver</option>
+                <option value="America%2FCosta_Rica">America/Costa Rica</option>
+                <option value="America%2FLos_Angeles">America/Los Angeles</option>
+                <option value="America%2FSt_Vincent">America/Costa Rica</option>
+                <option value="America%2FToronto">America/Toronto</option>
+                <option value="Europe%2FAmsterdam">Europe/Amsterdam</option>
+                <option value="Europe%2FMonaco">Europe/Monaco</option>
+                <option value="Europe%2FPrauge">Europe/Prauge</option>
+                <option value="Europe%2FIsle_of_Man">Europe/Isle of Man</option>
+                <option value="Africa%2FCairo">Africa/Cairo</option>
+                <option value="Africa%2FJohannesburg">Africa/Johannesburg</option>
+                <option value="Africa%2FNairobi">Africa/Nairobi</option>
+                <option value="Asia%2FYakutsk">Asia/Yakutsk</option>
+                <option value="Asia%2FHong_Kong">Asia/Hong Kong</option>
+                <option value="Asia%2FTapei">Asia/Tapei</option>
+                <option value="Pacific%2FMidway">Pacific/Midway</option>
+                <option value="Pacific%2FHonolulu">Pacific/Honolulu</option>
+                <option value="Etc%2FGMT-6">Etc/GMT-6</option>
+                <option value="US%2FSamoa">US/Samoa</option>
+                <option value="Zulu">Zulu</option>
+                <option value="US%2FHawaii">US/Hawaii</option>
+                <option value="Israel">Israel</option>
+
+            </select>
+
+            <div id="query-button-wrapper">
+                <button id="search-today-btn" class="btn btn-light">🔍</button>
+            </div>
+
         </div>
-        <div id="query-wrapper">
-            <input type="text" id="search-name" class="form-control" placeholder="Search for a name..">
-            <button id="search-name-btn" class="btn btn-light">🔍</button>
+
+        <div id="namedayToday">
+
+        </div>
+
+
+        <h2>Search by name:</h2>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Country</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect05">
+                <option selected>--</option>
+                <option value="cz">CZ</option>
+                <option value="sk">SK</option>
+                <option value="pl">PL</option>
+                <option value="fr">FR</option>
+                <option value="hu">HU</option>
+                <option value="hr">HR</option>
+                <option value="se">SE</option>
+                <option value="us">US</option>
+                <option value="at">AT</option>
+                <option value="it">IT</option>
+                <option value="es">ES</option>
+                <option value="de">DE</option>
+                <option value="dk">DK</option>
+                <option value="fi">FI</option>
+            </select>
+
+            <div class="input-group mb-3">
+                <input type="text" id="search-name" class="form-control" placeholder="Search for a name..">
+                <button id="search-name-btn" class="btn btn-light">🔍</button>
+            </div>
+
+
+
         </div>
         <div id="nameday">
 
         </div>
 
+        <h2>Search by date:</h2>
         <div class="byDate">
-            <h2>Or try searching by date:</h2>
-        </div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <label class="input-group-text" for="inputGroupSelect02">Month</label>
-            </div>
-            <select class="custom-select" id="inputGroupSelect02">
-                <option selected>--</option>
-                <option value="1">January</option>
-                <option value="2">February</option>
-                <option value="3">March</option>
-                <option value="4">April</option>
-                <option value="5">May</option>
-                <option value="6">June</option>
-                <option value="7">July</option>
-                <option value="8">August</option>
-                <option value="9">September</option>
-                <option value="10">October</option>
-                <option value="11">November</option>
-                <option value="12">December</option>
-            </select>
-        </div>
 
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <label class="input-group-text" for="inputGroupSelect03">Day</label>
+            <div class="input-group mb-3" id="group-padding">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Country</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect06">
+                    <option selected>--</option>
+                    <option value="cz">CZ</option>
+                    <option value="sk">SK</option>
+                    <option value="pl">PL</option>
+                    <option value="fr">FR</option>
+                    <option value="hu">HU</option>
+                    <option value="hr">HR</option>
+                    <option value="se">SE</option>
+                    <option value="us">US</option>
+                    <option value="at">AT</option>
+                    <option value="it">IT</option>
+                    <option value="es">ES</option>
+                    <option value="de">DE</option>
+                    <option value="dk">DK</option>
+                    <option value="fi">FI</option>
+                </select>
             </div>
-            <select class="custom-select" id="inputGroupSelect03">
-                <option selected>--</option>
-                <option value="1">01</option>
-                <option value="2">02</option>
-                <option value="3">03</option>
-                <option value="4">04</option>
-                <option value="5">05</option>
-                <option value="6">06</option>
-                <option value="7">07</option>
-                <option value="8">08</option>
-                <option value="9">09</option>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-                <option value="13">13</option>
-                <option value="14">14</option>
-                <option value="15">15</option>
-                <option value="16">16</option>
-                <option value="17">17</option>
-                <option value="18">18</option>
-                <option value="19">19</option>
-                <option value="20">20</option>
-                <option value="21">21</option>
-                <option value="22">22</option>
-                <option value="23">23</option>
-                <option value="24">24</option>
-                <option value="25">24</option>
-                <option value="26">26</option>
-                <option value="27">27</option>
-                <option value="28">28</option>
-                <option value="29">29</option>
-                <option value="30">30</option>
-                <option value="31">31</option>
-            </select>
-            <div id="query-button-wrapper">
-                <button id="search-date-btn" class="btn btn-light">🔍</button>
+
+            <div class="input-group mb-3" id="group-padding">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect02">Month</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect02">
+                    <option selected>--</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
             </div>
+
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect03">Day</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect03">
+                    <option selected>--</option>
+                    <option value="1">01</option>
+                    <option value="2">02</option>
+                    <option value="3">03</option>
+                    <option value="4">04</option>
+                    <option value="5">05</option>
+                    <option value="6">06</option>
+                    <option value="7">07</option>
+                    <option value="8">08</option>
+                    <option value="9">09</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">24</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                </select>
+                <div id="query-button-wrapper">
+                    <button id="search-date-btn" class="btn btn-light">🔍</button>
+                </div>
+            </div>
+
         </div>
         <div id="namedayByDate">
 
         </div>
-
+    </div>
 
     </div>
     <script src="assets/scripts/nameday.js"></script>

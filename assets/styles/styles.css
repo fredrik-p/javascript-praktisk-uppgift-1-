@@ -4,14 +4,15 @@ body {
 	line-height: 1.5;
 	letter-spacing: 0.1em;
 	height: 100vh;
-	font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    
 }
 
 .container{
 	padding: 1em;
 	height: auto;
 	width: 90%;
-	border-radius: .5em;
+	border-radius: 1em;
 	box-shadow: -12px -12px 12px 0 rgba(255, 255, 255, 1),
 	12px 12px 12px 0 rgba(0, 0, 0, 0.3);
   }
@@ -22,7 +23,7 @@ body {
 }
 
 h2 {
-	font-size: 1em;
+	font-size: 1rem;
     font-weight: 400;
     margin-top: 2em;
 }
@@ -34,9 +35,14 @@ h2 {
 	margin-bottom: 2rem;
 }
 
+#button-wrapper {
+	display: flex;
+	
+}
+
 #query-wrapper {
 	display: flex;
-	margin-bottom: 0.5rem;
+	
 }
 
 #query-button-wrapper {
@@ -44,7 +50,7 @@ h2 {
 }
 
 p.names {
-	font-size: 1.5em;
+	font-size: 1em;
 	text-align: center;
 }
 
@@ -54,8 +60,16 @@ p.date {
 	text-align: center;
 }
 
-@media only screen and (min-width: 479px) {
+@media only screen and (min-width: 630px) {
     .byDate {
         display: flex;
+    }
+
+    .byName {
+        display: flex;
+    }
+
+    #group-padding {
+        margin-right: 5px;
     }
   }

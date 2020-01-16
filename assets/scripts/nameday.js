@@ -42,3 +42,27 @@ const searchDates = async (country, month, day) => {
     });
     return a;
 }
+
+const searchTimezone = async (country, timezone) => {
+    let url = "https://api.abalin.net/today?" + "country=" + country
+        + "&timezone=" + timezone;
+    const response = await fetch(url);
+    const data = await response.json();
+    let a = '';
+
+    data.data.forEach(result => {
+        let i = `
+        
+        <p class="names">
+            ${result.namedays[country]} has nameday on the:
+        </p>
+        
+        <p class="date">
+            ${result.dates.day}/${result.dates.month}
+        </p>
+       
+        `;
+        a += i;
+    });
+    return a;
+}
