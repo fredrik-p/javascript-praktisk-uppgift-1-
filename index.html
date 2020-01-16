@@ -19,7 +19,7 @@
                 <label class="input-group-text" for="inputGroupSelect01">Country</label>
             </div>
             <select class="custom-select" id="inputGroupSelect01">
-                <option selected>Choose supported country..</option>
+                <option selected>Choose a country..</option>
                 <option value="cz">CZ</option>
                 <option value="sk">SK</option>
                 <option value="pl">PL</option>
@@ -36,21 +36,26 @@
                 <option value="fi">FI</option>
             </select>
         </div>
-
-        <div id="query-wrapper">
-            <input type="text" id="search-name" class="form-control" placerholder="Search name">
-            <button onclick="SearchNameDay()" class="btn btn-light">Search</button>
+        <div class="byDate">
+            <h2>Search by name:</h2>
+        </div>
+        <div <div id="query-wrapper">
+            <input type="text" id="search-name" class="form-control" placeholder="Search for a name..">
+            <button onclick="SearchNameDay()" class="btn btn-light">🔍</button>
         </div>
         <div id="nameday">
 
         </div>
 
+        <div class="byDate">
+            <h2>Or try searching by date:</h2>
+        </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <label class="input-group-text" for="inputGroupSelect02">Month</label>
             </div>
             <select class="custom-select" id="inputGroupSelect02">
-                <option selected>Choose month..</option>
+                <option selected>--</option>
                 <option value="1">January</option>
                 <option value="2">February</option>
                 <option value="3">March</option>
@@ -71,7 +76,7 @@
                 <label class="input-group-text" for="inputGroupSelect03">Day</label>
             </div>
             <select class="custom-select" id="inputGroupSelect03">
-                <option selected>Choose day..</option>
+                <option selected>--</option>
                 <option value="1">01</option>
                 <option value="2">02</option>
                 <option value="3">03</option>
@@ -104,7 +109,14 @@
                 <option value="30">30</option>
                 <option value="31">31</option>
             </select>
+            <div id="query-button-wrapper">
+                <button onclick="SearchByDate()" class="btn btn-light">🔍</button>
+            </div>
         </div>
+        <div id="namedayByDate">
+
+        </div>
+
 
     </div>
     <script src="assets/scripts/nameday.js"></script>

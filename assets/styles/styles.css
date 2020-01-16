@@ -20,3 +20,42 @@ body {
 	font-size: 1.5em;
 	font-weight: 700;
 }
+
+h2 {
+	font-size: 1em;
+    font-weight: 400;
+    margin-top: 2em;
+}
+
+#search-form {
+	max-width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2rem;
+}
+
+#query-wrapper {
+	display: flex;
+	margin-bottom: 0.5rem;
+}
+
+#query-button-wrapper {
+	display: flex;
+}
+
+p.names {
+	font-size: 1.5em;
+	text-align: center;
+}
+
+p.date {
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+}
+
+@media only screen and (min-width: 479px) {
+    .byDate {
+        display: flex;
+    }
+  }
