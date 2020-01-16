@@ -19,3 +19,26 @@ const searchByName = async (country, query) => {
     });
     return a;
 }
+
+const searchDates = async (country, month, day) => {
+    let url = "https://api.abalin.net/namedays?" + "country=" + country
+        + "&month=" + month + "&day=" + day;
+    const response = await fetch(url);
+    const data = await response.json();
+    let a = '';
+    data.data.forEach(result => {
+        let i = `
+        
+        <p class="names">
+            ${result.namedays[country]} has nameday on the:
+        </p>
+        
+        <p class="date">
+            ${result.dates.day}/${result.dates.month}
+        </p>
+       
+        `;
+        a += i;
+    });
+    return a;
+}
