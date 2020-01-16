@@ -9,11 +9,15 @@ const SearchNameDay = () => {
     });
 }
 
+
+
 const SearchByDate = () => {
     let country = document.getElementById("inputGroupSelect01").value;
     let month = document.getElementById("inputGroupSelect02").value;
     let day = document.getElementById("inputGroupSelect03").value;
-
+    document.getElementById("inputGroupSelect01").selectedIndex = 0;
+    document.getElementById("inputGroupSelect02").selectedIndex = 0;
+    document.getElementById("inputGroupSelect03").selectedIndex = 0;
 
     const result = searchDates(country, month, day).then(value => {
         console.log(value);
